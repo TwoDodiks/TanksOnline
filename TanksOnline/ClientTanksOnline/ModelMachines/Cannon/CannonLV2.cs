@@ -6,9 +6,18 @@ using System.Threading.Tasks;
 
 namespace ClientTanksOnline.ModelTank.Cannon
 {
-	class CannonLV2:ICannon
+	class CannonLV2:IWeapone
 	{
-		public int damage = 2;
-		public int armor_damage = 1;
+		const int damage = 2;
+		const int armor_damage = 1;
+		public int GetDamage()
+		{
+			return damage;
+		}
+
+		public int GetDamageArmor()
+		{
+			return armor_damage;
+		}
 	}
 }

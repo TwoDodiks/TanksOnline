@@ -1,4 +1,6 @@
-﻿using ClientTanksOnline.ModelTank.Cannon;
+﻿using ClientTanksOnline.ModelMachines.Armor;
+using ClientTanksOnline.ModelTank.Cannon;
+using ClientTanksOnline.ModelTank.Health;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,37 +11,38 @@ namespace ClientTanksOnline.ModelTank
 {
 	class Tank : IMachines
 	{
-		//int damage;
-		//int armor_damage;
-		//int health;
-		//int armor;
-
-		public ICannon cannon;
-		private IArmor armor;
-
-		public ICannon GetCannon { get=>cannon; set { cannon = value; } }
-		public IArmor GetArmor { get => armor; set { armor = value; } }
-
-		public IMachines Armor(IArmor armor)
-		{
-			this.armor = armor;
-			return this;
-		}
-
-		public IMachines Weapone(ICannon cannon)
-		{
-			this.cannon = cannon;
-			
-			return this;
-		}
+		readonly IHealth health;
+		readonly IWeapone weapone;
+		readonly IArmor armor;
 		public Tank()
 		{
-
+			this.weapone = new CannonLV2();
+			this.armor = new ArmorLV2();
+			this.health = new HealthLV1();
 		}
-		private void A()
+		public int GetArmor()
 		{
-			
+			return armor.GetArmor();
 		}
-		
+
+		public int GetArmorProtection()
+		{
+			return armor.GetArmorProtection();
+		}
+
+		public int GetDamage()
+		{
+			return weapone.GetDamage();
+		}
+
+		public int GetDamageProtection()
+		{
+			return weapone.GetDamageArmor();
+		}
+
+		public int GetSpeed()
+		{
+			return 5;
+		}
 	}
 }

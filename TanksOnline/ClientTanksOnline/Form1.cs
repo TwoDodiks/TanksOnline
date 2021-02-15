@@ -1,5 +1,6 @@
 ﻿using ClientTanksOnline.ModelTank;
 using ClientTanksOnline.ModelTank.Cannon;
+using ClientTanksOnline.ModelTank.Health;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,11 +20,6 @@ namespace ClientTanksOnline
 			InitializeComponent();
 			
 			IMachines tank = new Tank();
-			tank.Weapone(new CannonLV1());
-			this.Text = tank.GetCannon.ToString();
-			CannonLV2 cannon = new CannonLV2();
-			cannon = (CannonLV2)tank.GetCannon;
-			IMachines light = new LightTank();
 			
 		}
 	}

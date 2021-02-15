@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace ClientTanksOnline.ModelTank
 {
-	interface ICannon
+	interface IWeapone
 	{
-		
+		int GetDamage();
+		int GetDamageArmor();
 	}
 }

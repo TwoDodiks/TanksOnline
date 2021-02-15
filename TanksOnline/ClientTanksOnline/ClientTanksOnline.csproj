@@ -54,14 +54,14 @@
     </Compile>
     <Compile Include="IMachines.cs" />
     <Compile Include="ModelMachines\Armor\ArmorLV1.cs" />
+    <Compile Include="ModelMachines\Armor\ArmorLV2.cs" />
     <Compile Include="ModelMachines\Cannon\CannonLV1.cs" />
     <Compile Include="ModelMachines\Cannon\CannonLV2.cs" />
-    <Compile Include="ModelMachines\Health\Health.cs" />
+    <Compile Include="ModelMachines\Health\HealthLV1.cs" />
     <Compile Include="ModelMachines\IArmor.cs" />
-    <Compile Include="ModelMachines\ICannon.cs" />
+    <Compile Include="ModelMachines\IWeapone.cs" />
     <Compile Include="ModelMachines\IHealth.cs" />
     <Compile Include="ModelMachines\ISpeed.cs" />
-    <Compile Include="ModelMachines\ITank.cs" />
     <Compile Include="ModelMachines\Model\LightTank.cs" />
     <Compile Include="ModelMachines\Model\Tank.cs" />
     <Compile Include="Program.cs" />

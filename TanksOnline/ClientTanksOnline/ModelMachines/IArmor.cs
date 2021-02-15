@@ -8,6 +8,7 @@ namespace ClientTanksOnline.ModelTank
 {
 	interface IArmor
 	{
-
+		int GetArmor();
+		int GetArmorProtection();
 	}
 }

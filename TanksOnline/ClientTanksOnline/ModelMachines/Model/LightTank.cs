@@ -1,24 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ClientTanksOnline.ModelTank.Armor;
+using ClientTanksOnline.ModelTank.Cannon;
+using ClientTanksOnline.ModelTank.Health;
 
 namespace ClientTanksOnline.ModelTank
 {
-	class LightTank : IMachines
+	class LightTank :IMachines
 	{
-		public ICannon GetCannon { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-		public IArmor GetArmor { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
-		public IMachines Armor(IArmor armor)
+		readonly IHealth health;
+		readonly IWeapone weapone;
+		readonly IArmor armor;
+		public LightTank()
 		{
-			throw new NotImplementedException();
+			this.weapone = new CannonLV1();
+			this.armor = new ArmorLV1();
+			this.health = new HealthLV1();
+		}
+		public int GetArmor()
+		{
+			return armor.GetArmor();
 		}
 
-		public IMachines Weapone(ICannon cannon)
+		public int GetArmorProtection()
 		{
-			throw new NotImplementedException();
+			return armor.GetArmorProtection();
 		}
+
+		public int GetDamage()
+		{
+			return weapone.GetDamage();
+		}
+
+		public int GetDamageProtection()
+		{
+			return weapone.GetDamageArmor();
+		}
+
+		public int GetSpeed()
+		{
+			return 5;
+		}
+	
 	}
 }

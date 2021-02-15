@@ -8,9 +8,10 @@ namespace ClientTanksOnline.ModelTank
 {
 	interface IMachines
 	{
-		IMachines Weapone(ICannon cannon);
-		IMachines Armor(IArmor armor);
-		ICannon GetCannon { get; set; }
-		IArmor GetArmor { get; set; }
+		int GetDamage();
+		int GetDamageProtection();
+		int GetArmor();
+		int GetArmorProtection();
+		int GetSpeed();
 	}
 }

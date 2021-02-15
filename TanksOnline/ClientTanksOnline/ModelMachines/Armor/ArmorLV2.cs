@@ -1,15 +1,16 @@
-﻿using System;
+﻿using ClientTanksOnline.ModelTank;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClientTanksOnline.ModelTank.Armor
+namespace ClientTanksOnline.ModelMachines.Armor
 {
-	class ArmorLV1:IArmor
+	class ArmorLV2 :IArmor
 	{
-		const int armor = 0;
-		const int armor_protection = 0;
+		const int armor = 1;
+		const int armor_protection = 1;
 		public int GetArmor()
 		{
 			return armor;

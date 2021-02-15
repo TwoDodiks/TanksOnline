@@ -8,5 +8,7 @@ namespace ClientTanksOnline.ModelTank
 {
 	interface IHealth
 	{
+		int GetHealth();
+		void SetHealth(int health);
 	}
 }

@@ -8,6 +8,6 @@ namespace ClientTanksOnline.ModelTank
 {
 	interface ISpeed
 	{
-		
+		int GetSpeed();
 	}
 }
