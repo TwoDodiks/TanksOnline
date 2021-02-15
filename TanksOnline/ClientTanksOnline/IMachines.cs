@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClientTanksOnline.ModelTank
+namespace ClientTanksOnline
 {
 	interface IMachines
 	{
@@ -13,5 +13,7 @@ namespace ClientTanksOnline.ModelTank
 		int GetArmor();
 		int GetArmorProtection();
 		int GetSpeed();
+		void UpWeapone();
+		void UpArmor();
 	}
 }

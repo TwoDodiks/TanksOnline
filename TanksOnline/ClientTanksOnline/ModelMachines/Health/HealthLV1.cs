@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
-namespace ClientTanksOnline.ModelTank.Health
+namespace ClientTanksOnline.ModelMachines.Health
 {
 	class HealthLV1 : IHealth
 	{

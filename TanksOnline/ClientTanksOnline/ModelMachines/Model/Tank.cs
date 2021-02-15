@@ -1,24 +1,24 @@
 ﻿using ClientTanksOnline.ModelMachines.Armor;
-using ClientTanksOnline.ModelTank.Cannon;
-using ClientTanksOnline.ModelTank.Health;
+using ClientTanksOnline.ModelMachines.Cannon;
+using ClientTanksOnline.ModelMachines.Health;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClientTanksOnline.ModelTank
+namespace ClientTanksOnline.ModelMachines
 {
 	class Tank : IMachines
 	{
-		readonly IHealth health;
-		readonly IWeapone weapone;
-		readonly IArmor armor;
+		IHealth health;
+		IWeapone weapone;
+		IArmor armor;
 		public Tank()
 		{
-			this.weapone = new CannonLV2();
-			this.armor = new ArmorLV2();
-			this.health = new HealthLV1();
+			this.weapone = new CannonLV1();
+			this.armor = new ArmorLV1();
+			this.health = new HealthLV1(15);
 		}
 		public int GetArmor()
 		{
@@ -42,7 +42,17 @@ namespace ClientTanksOnline.ModelTank
 
 		public int GetSpeed()
 		{
-			return 5;
+			return 3;
+		}
+
+		public void UpArmor()
+		{
+			this.armor = new ArmorLV2();
+		}
+
+		public void UpWeapone()
+		{
+			this.weapone = new CannonLV2();
 		}
 	}
 }

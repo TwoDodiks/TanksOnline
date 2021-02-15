@@ -1,6 +1,6 @@
-﻿using ClientTanksOnline.ModelTank;
-using ClientTanksOnline.ModelTank.Cannon;
-using ClientTanksOnline.ModelTank.Health;
+﻿using ClientTanksOnline.ModelMachines;
+using ClientTanksOnline.ModelMachines.Cannon;
+using ClientTanksOnline.ModelMachines.Health;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,9 +18,10 @@ namespace ClientTanksOnline
 		public Form1()
 		{
 			InitializeComponent();
-			
+
 			IMachines tank = new Tank();
-			
+
+
 		}
 	}
 }

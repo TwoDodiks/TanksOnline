@@ -1,14 +1,14 @@
-﻿using ClientTanksOnline.ModelTank.Armor;
-using ClientTanksOnline.ModelTank.Cannon;
-using ClientTanksOnline.ModelTank.Health;
+﻿using ClientTanksOnline.ModelMachines.Armor;
+using ClientTanksOnline.ModelMachines.Cannon;
+using ClientTanksOnline.ModelMachines.Health;
 
-namespace ClientTanksOnline.ModelTank
+namespace ClientTanksOnline.ModelMachines
 {
 	class LightTank :IMachines
 	{
-		readonly IHealth health;
-		readonly IWeapone weapone;
-		readonly IArmor armor;
+		 IHealth health;
+		 IWeapone weapone;
+		 IArmor armor;
 		public LightTank()
 		{
 			this.weapone = new CannonLV1();
@@ -39,6 +39,15 @@ namespace ClientTanksOnline.ModelTank
 		{
 			return 5;
 		}
-	
+
+		public void UpArmor()
+		{
+			this.armor = new ArmorLV2();
+		}
+
+		public void UpWeapone()
+		{
+			this.weapone = new CannonLV2();
+		}
 	}
 }
