@@ -1,0 +1,9 @@
+D:\TanksOnline\TanksOnline\TanksOnline\bin\Debug\TanksOnline.exe.config
+D:\TanksOnline\TanksOnline\TanksOnline\bin\Debug\TanksOnline.exe
+D:\TanksOnline\TanksOnline\TanksOnline\bin\Debug\TanksOnline.pdb
+D:\TanksOnline\TanksOnline\TanksOnline\obj\Debug\TanksOnline.csprojAssemblyReference.cache
+D:\TanksOnline\TanksOnline\TanksOnline\obj\Debug\TanksOnline.Properties.Resources.resources
+D:\TanksOnline\TanksOnline\TanksOnline\obj\Debug\TanksOnline.csproj.GenerateResource.cache
+D:\TanksOnline\TanksOnline\TanksOnline\obj\Debug\TanksOnline.csproj.CoreCompileInputs.cache
+D:\TanksOnline\TanksOnline\TanksOnline\obj\Debug\TanksOnline.exe
+D:\TanksOnline\TanksOnline\TanksOnline\obj\Debug\TanksOnline.pdb
