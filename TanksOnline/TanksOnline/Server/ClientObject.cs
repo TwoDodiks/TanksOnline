@@ -26,7 +26,11 @@ namespace TanksOnline.Server
 			try
 			{
 				Stream = client.GetStream();
+				while (true)
+				{
 
+
+				}
 
 			}
 			catch (Exception ex)

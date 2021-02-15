@@ -52,6 +52,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IMachines.cs" />
+    <Compile Include="ModelTank\Armor\ArmorLV1.cs" />
+    <Compile Include="ModelTank\Cannon\CannonLV1.cs" />
+    <Compile Include="ModelTank\Cannon\CannonLV2.cs" />
+    <Compile Include="ModelTank\Health\Health.cs" />
+    <Compile Include="ModelTank\IArmor.cs" />
+    <Compile Include="ModelTank\ICannon.cs" />
+    <Compile Include="ModelTank\IHealth.cs" />
+    <Compile Include="ModelTank\ISpeed.cs" />
+    <Compile Include="ModelTank\ITank.cs" />
+    <Compile Include="ModelTank\Tank\LightTank.cs" />
+    <Compile Include="ModelTank\Tank\Tank.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -76,8 +88,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ModelTank\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
