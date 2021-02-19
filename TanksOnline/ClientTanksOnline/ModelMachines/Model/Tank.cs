@@ -3,9 +3,11 @@ using ClientTanksOnline.ModelMachines.Cannon;
 using ClientTanksOnline.ModelMachines.Health;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ClientTanksOnline.ModelMachines
 {
@@ -14,12 +16,21 @@ namespace ClientTanksOnline.ModelMachines
 		IHealth health;
 		IWeapone weapone;
 		IArmor armor;
+	    PictureBox picture;
+		
 		public Tank()
 		{
+			this.picture = new PictureBox();
+			this.picture.Image = Image.FromFile("lt.png");
+			this.picture.Size = new Size(40, 40);
+			this.picture.SizeMode = PictureBoxSizeMode.StretchImage;
 			this.weapone = new CannonLV1();
 			this.armor = new ArmorLV1();
 			this.health = new HealthLV1(15);
 		}
+
+		public PictureBox Picture => picture;
+
 		public int GetArmor()
 		{
 			return armor.GetArmor();

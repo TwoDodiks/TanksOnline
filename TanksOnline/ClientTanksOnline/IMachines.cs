@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ClientTanksOnline
 {
 	interface IMachines
 	{
+		PictureBox Picture { get; }
 		int GetDamage();
 		int GetDamageProtection();
 		int GetArmor();
@@ -15,5 +17,6 @@ namespace ClientTanksOnline
 		int GetSpeed();
 		void UpWeapone();
 		void UpArmor();
+
 	}
 }

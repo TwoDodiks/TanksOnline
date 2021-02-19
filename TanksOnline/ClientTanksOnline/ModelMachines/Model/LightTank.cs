@@ -1,6 +1,7 @@
 ﻿using ClientTanksOnline.ModelMachines.Armor;
 using ClientTanksOnline.ModelMachines.Cannon;
 using ClientTanksOnline.ModelMachines.Health;
+using System.Windows.Forms;
 
 namespace ClientTanksOnline.ModelMachines
 {
@@ -15,6 +16,9 @@ namespace ClientTanksOnline.ModelMachines
 			this.armor = new ArmorLV1();
 			this.health = new HealthLV1();
 		}
+
+		public PictureBox Picture => throw new System.NotImplementedException();
+
 		public int GetArmor()
 		{
 			return armor.GetArmor();
