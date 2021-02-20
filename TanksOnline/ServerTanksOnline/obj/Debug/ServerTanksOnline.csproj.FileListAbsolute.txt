@@ -22,3 +22,4 @@ D:\TanksOnline\TanksOnline\ServerTanksOnline\obj\Debug\TanksOnline.exe
 D:\TanksOnline\TanksOnline\ServerTanksOnline\obj\Debug\TanksOnline.pdb
 D:\TanksOnline\TanksOnline\ServerTanksOnline\obj\Debug\ServerTanksOnline.csprojAssemblyReference.cache
 D:\TanksOnline\TanksOnline\ServerTanksOnline\bin\Debug\Serialization.dll
+D:\TanksOnline\TanksOnline\ServerTanksOnline\bin\Debug\Serialization.pdb
