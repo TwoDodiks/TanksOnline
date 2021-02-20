@@ -26,14 +26,13 @@ namespace ClientTanksOnline
 			tcpClient = new TcpClient();
 			tcpClient.Connect("127.0.0.1", 8000);
 			networkStream = tcpClient.GetStream();
-
 			tank1.Picture.Location = new Point(position.X, position.Y);
-			
+
 			position.X = 50;
 			position.Y = 50;
 			position.Speed = tank1.GetSpeed();
 			this.Controls.Add(tank1.Picture);
-			Thread thread = new Thread(new ThreadStart(GetTraffic));
+			Thread thread = new Thread(new ThreadStart(GetAction));
 			thread.Start();
 			this.KeyDown += Form2_KeyDown;
 		}
@@ -44,14 +43,14 @@ namespace ClientTanksOnline
 			if (e.KeyData == Keys.Up) position.Down = true; else position.Down = false;
 			if (e.KeyData == Keys.Left) position.Left = true; else position.Left = false;
 			if (e.KeyData == Keys.Right) position.Righ = true; else position.Righ = false;
-			SendTraffic();
+			SendAction();
 		}
-		private void SendTraffic()
+		private void SendAction()
 		{
 			byte[] data = Serialization.Serialization.ObjectToByteArray(position);
 			networkStream.Write(data, 0, data.Length);
 		}
-		private void GetTraffic()
+		private void GetAction()
 		{
 			while (true)
 			{
