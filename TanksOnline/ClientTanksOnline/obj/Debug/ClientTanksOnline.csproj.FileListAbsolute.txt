@@ -8,3 +8,4 @@ D:\TanksOnline\TanksOnline\ClientTanksOnline\obj\Debug\ClientTanksOnline.exe
 D:\TanksOnline\TanksOnline\ClientTanksOnline\obj\Debug\ClientTanksOnline.pdb
 D:\TanksOnline\TanksOnline\ClientTanksOnline\obj\Debug\ClientTanksOnline.csproj.CopyComplete
 D:\TanksOnline\TanksOnline\ClientTanksOnline\obj\Debug\ClientTanksOnline.Form1.resources
+D:\TanksOnline\TanksOnline\ClientTanksOnline\obj\Debug\ClientTanksOnline.csprojAssemblyReference.cache

@@ -34,7 +34,7 @@ namespace ClientTanksOnline
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(713, 415);
+			this.button1.Location = new System.Drawing.Point(123, 56);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(75, 23);
 			this.button1.TabIndex = 0;
@@ -46,11 +46,10 @@ namespace ClientTanksOnline
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.ClientSize = new System.Drawing.Size(331, 152);
 			this.Controls.Add(this.button1);
 			this.Name = "Form1";
 			this.Text = "Form1";
-			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
 			this.ResumeLayout(false);
 
 		}

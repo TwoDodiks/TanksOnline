@@ -35,19 +35,24 @@ namespace ClientTanksOnline
 			//Listen();
 
 			tcpListener = new TcpListener(IPAddress.Any, 8000);
-			tcpListener.Start();
+			tcpListener.Start(2);
 			Start();
 		}
 		private async void Start()
 		{
 			await Task.Run(() => 
 			{ 
-				tcpClient = tcpListener.AcceptTcpClient();
-				networkStream = tcpClient.GetStream();
+				while(true)
+				{
+					tcpClient = tcpListener.AcceptTcpClient();
+
+					networkStream = tcpClient.GetStream();
+					Thread thread = new Thread(new ThreadStart(GetAction));
+					thread.Start();
+				}
 
 			});
-			Thread thread = new Thread(new ThreadStart(GetAction));
-			thread.Start();
+			
 		}
 		public Position NewAction(ref Position position)
 		{
