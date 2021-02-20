@@ -11,4 +11,13 @@ D:\TanksOnline\TanksOnline\TanksOnline\bin\Debug\ClientTanksOnline.exe
 D:\TanksOnline\TanksOnline\TanksOnline\bin\Debug\ClientTanksOnline.pdb
 D:\TanksOnline\TanksOnline\TanksOnline\bin\Debug\ClientTanksOnline.exe.config
 D:\TanksOnline\TanksOnline\TanksOnline\obj\Debug\ServerTanksOnline.csproj.CopyComplete
-D:\TanksOnline\TanksOnline\TanksOnline\bin\Debug\Serialization.dll
+D:\TanksOnline\TanksOnline\ServerTanksOnline\bin\Debug\TanksOnline.exe.config
+D:\TanksOnline\TanksOnline\ServerTanksOnline\bin\Debug\TanksOnline.exe
+D:\TanksOnline\TanksOnline\ServerTanksOnline\bin\Debug\TanksOnline.pdb
+D:\TanksOnline\TanksOnline\ServerTanksOnline\obj\Debug\TanksOnline.Properties.Resources.resources
+D:\TanksOnline\TanksOnline\ServerTanksOnline\obj\Debug\ServerTanksOnline.csproj.GenerateResource.cache
+D:\TanksOnline\TanksOnline\ServerTanksOnline\obj\Debug\ServerTanksOnline.csproj.CoreCompileInputs.cache
+D:\TanksOnline\TanksOnline\ServerTanksOnline\obj\Debug\ServerTanksOnline.csproj.CopyComplete
+D:\TanksOnline\TanksOnline\ServerTanksOnline\obj\Debug\TanksOnline.exe
+D:\TanksOnline\TanksOnline\ServerTanksOnline\obj\Debug\TanksOnline.pdb
+D:\TanksOnline\TanksOnline\ServerTanksOnline\obj\Debug\ServerTanksOnline.csprojAssemblyReference.cache

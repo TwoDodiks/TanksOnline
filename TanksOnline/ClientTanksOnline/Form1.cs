@@ -1,6 +1,6 @@
-﻿using TanksOnline.ModelMachines;
-using TanksOnline.ModelMachines.Cannon;
-using TanksOnline.ModelMachines.Health;
+﻿using ClientTanksOnline.ModelMachines;
+using ClientTanksOnline.ModelMachines.Cannon;
+using ClientTanksOnline.ModelMachines.Health;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +15,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TanksOnline
+namespace ClientTanksOnline
 {
 	public partial class Form1 : Form
 	{
@@ -27,23 +27,20 @@ namespace TanksOnline
 		public Form1()
 		{
 			InitializeComponent();
-			tcpClient = new TcpClient();
-			tcpClient.Connect("127.0.0.1", 8000);
-			networkStream = tcpClient.GetStream();
-
-			tank1.Picture.Location = new Point(position.X, position.Y);
-
-			position.X = 50;
-			position.Y = 50;
-			position.Speed = tank1.GetSpeed();
-
-
-			this.Controls.Add(tank1.Picture);
-
-			Thread thread = new Thread(new ThreadStart(GetTraffic));
-			thread.Start();
+			this.KeyPress += Form1_KeyPress;
+			this.KeyDown += Form1_KeyDown1;
 		}
-		
+
+		private void Form1_KeyDown1(object sender, KeyEventArgs e)
+		{
+			MessageBox.Show("Key Down");
+		}
+
+		private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			MessageBox.Show("Key Press");
+		}
+
 		private void Form1_KeyDown(object sender, KeyEventArgs e)
 		{
 			if (e.KeyData == Keys.Down) position.Up = true; else position.Up = false;
@@ -71,5 +68,23 @@ namespace TanksOnline
 			}
 		}
 
+		private void button1_Click(object sender, EventArgs e)
+		{
+			//tcpClient = new TcpClient();
+			//tcpClient.Connect("127.0.0.1", 8000);
+			//networkStream = tcpClient.GetStream();
+
+			//tank1.Picture.Location = new Point(position.X, position.Y);
+
+			//position.X = 50;
+			//position.Y = 50;
+			//position.Speed = tank1.GetSpeed();
+
+
+			//this.Controls.Add(tank1.Picture);
+
+			//Thread thread = new Thread(new ThreadStart(GetTraffic));
+			//thread.Start();
+		}
 	}
 }

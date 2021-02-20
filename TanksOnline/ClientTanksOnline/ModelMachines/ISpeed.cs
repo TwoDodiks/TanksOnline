@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TanksOnline.ModelMachines
+namespace ClientTanksOnline.ModelMachines
 {
 	interface ISpeed
 	{

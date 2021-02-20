@@ -14,7 +14,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TanksOnline
+namespace ClientTanksOnline
 {
 	public partial class Form1 : Form
 	{
@@ -36,13 +36,19 @@ namespace TanksOnline
 
 			tcpListener = new TcpListener(IPAddress.Any, 8000);
 			tcpListener.Start();
-			tcpClient = tcpListener.AcceptTcpClient();
+			Start();
+		}
+		private async void Start()
+		{
+			await Task.Run(() => 
+			{ 
+				tcpClient = tcpListener.AcceptTcpClient();
+				networkStream = tcpClient.GetStream();
+
+			});
 			Thread thread = new Thread(new ThreadStart(GetAction));
 			thread.Start();
-			networkStream = tcpClient.GetStream();
-			//GetAction();
 		}
-
 		public Position NewAction(ref Position position)
 		{
 			if(position.Up)
