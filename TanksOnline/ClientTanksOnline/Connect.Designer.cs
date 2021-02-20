@@ -1,7 +1,7 @@
 ﻿
 namespace ClientTanksOnline
 {
-	partial class Form1
+	partial class Connect
 	{
 		/// <summary>
 		/// Обязательная переменная конструктора.

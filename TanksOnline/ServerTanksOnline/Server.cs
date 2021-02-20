@@ -20,7 +20,8 @@ namespace ClientTanksOnline
 	{
 
 		static TcpClient tcpClient;
-		static Socket host,client;
+
+		//static Socket host,client;
 		static TcpListener tcpListener;
 		static NetworkStream networkStream;
 		public Form1()
@@ -33,7 +34,7 @@ namespace ClientTanksOnline
 
 			//client = host.Accept();
 			//Listen();
-
+			
 			tcpListener = new TcpListener(IPAddress.Any, 8000);
 			tcpListener.Start(2);
 			Start();
@@ -54,7 +55,7 @@ namespace ClientTanksOnline
 			});
 			
 		}
-		public Position NewAction(ref Position position)
+		public ObjectAction NewAction(ref ObjectAction position)
 		{
 			if(position.Up)
 			{
@@ -80,7 +81,7 @@ namespace ClientTanksOnline
 		{
 			try
 			{
-				Position position = new Position();
+				ObjectAction position = new ObjectAction();
 				while (true)
 				{
 					byte[] bytes = new byte[1024];
@@ -88,7 +89,7 @@ namespace ClientTanksOnline
 					{
 						networkStream.Read(bytes, 0, bytes.Length);
 						Object temp = Serialization.Serialization.ByteArrayToObject(bytes);
-						position = (Position)temp;
+						position = (ObjectAction)temp;
 
 					} while (networkStream.DataAvailable);
 					SendAction(NewAction(ref position));
@@ -100,7 +101,7 @@ namespace ClientTanksOnline
 				MessageBox.Show(ex.Message);
 			}
 		}
-		public void SendAction(Position position)
+		public void SendAction(ObjectAction position)
 		{
 
 			byte[] data = Serialization.Serialization.ObjectToByteArray(position);

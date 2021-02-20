@@ -1,29 +1,26 @@
 ﻿using ClientTanksOnline.ModelMachines;
-
 using System;
-
 using Serialization;
 using System.Net.Sockets;
-
 using System.Windows.Forms;
 
 namespace ClientTanksOnline
 {
-	public partial class Form1 : Form
+	public partial class Connect : Form
 	{
 
-		Serialization.Position position = new Position();
+		Serialization.ObjectAction position = new ObjectAction();
 		public TcpClient tcpClient;
 		NetworkStream networkStream;
 		IMachines tank1 = new Tank();
-		public Form1()
+		public Connect()
 		{
 			InitializeComponent();
 			
 		}
 		private void button1_Click(object sender, EventArgs e)
 		{
-			Form2 form2 = new Form2();
+			Game form2 = new Game();
 			form2.ShowDialog();
 			this.Close();
 			//tcpClient = new TcpClient();

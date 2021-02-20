@@ -7,5 +7,7 @@ D:\TanksOnline\TanksOnline\ClientTanksOnline\obj\Debug\ClientTanksOnline.csproj.
 D:\TanksOnline\TanksOnline\ClientTanksOnline\obj\Debug\ClientTanksOnline.exe
 D:\TanksOnline\TanksOnline\ClientTanksOnline\obj\Debug\ClientTanksOnline.pdb
 D:\TanksOnline\TanksOnline\ClientTanksOnline\obj\Debug\ClientTanksOnline.csproj.CopyComplete
-D:\TanksOnline\TanksOnline\ClientTanksOnline\obj\Debug\ClientTanksOnline.Form1.resources
 D:\TanksOnline\TanksOnline\ClientTanksOnline\obj\Debug\ClientTanksOnline.csprojAssemblyReference.cache
+D:\TanksOnline\TanksOnline\ClientTanksOnline\bin\Debug\Serialization.dll
+D:\TanksOnline\TanksOnline\ClientTanksOnline\obj\Debug\ClientTanksOnline.Connect.resources
+D:\TanksOnline\TanksOnline\ClientTanksOnline\bin\Debug\Serialization.pdb

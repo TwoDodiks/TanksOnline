@@ -14,13 +14,13 @@ using System.Windows.Forms;
 
 namespace ClientTanksOnline
 {
-	public partial class Form2 : Form
+	public partial class Game : Form
 	{
-		Serialization.Position position = new Position();
+		Serialization.ObjectAction position = new ObjectAction();
 		public TcpClient tcpClient;
 		NetworkStream networkStream;
 		IMachines tank1 = new Tank();
-		public Form2()
+		public Game()
 		{
 			InitializeComponent();
 			tcpClient = new TcpClient();
@@ -28,7 +28,7 @@ namespace ClientTanksOnline
 			networkStream = tcpClient.GetStream();
 
 			tank1.Picture.Location = new Point(position.X, position.Y);
-
+			
 			position.X = 50;
 			position.Y = 50;
 			position.Speed = tank1.GetSpeed();
@@ -62,7 +62,7 @@ namespace ClientTanksOnline
 
 
 
-					position = (Serialization.Position)Serialization.Serialization.ByteArrayToObject(data);
+					position = (Serialization.ObjectAction)Serialization.Serialization.ByteArrayToObject(data);
 				} while (networkStream.DataAvailable);
 				tank1.Picture.Location = new Point(position.X, position.Y);
 			}

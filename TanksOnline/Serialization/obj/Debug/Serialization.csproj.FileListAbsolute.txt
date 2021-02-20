@@ -1,0 +1,5 @@
+D:\TanksOnline\TanksOnline\Serialization\bin\Debug\Serialization.dll
+D:\TanksOnline\TanksOnline\Serialization\bin\Debug\Serialization.pdb
+D:\TanksOnline\TanksOnline\Serialization\obj\Debug\Serialization.csproj.CoreCompileInputs.cache
+D:\TanksOnline\TanksOnline\Serialization\obj\Debug\Serialization.dll
+D:\TanksOnline\TanksOnline\Serialization\obj\Debug\Serialization.pdb
