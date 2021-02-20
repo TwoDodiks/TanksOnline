@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace ClientTanksOnline.ModelMachines.Health
+namespace TanksOnline.ModelMachines.Health
 {
 	class HealthLV1 : IHealth
 	{

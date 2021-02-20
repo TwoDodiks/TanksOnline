@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClientTanksOnline.ModelMachines.Armor
+namespace TanksOnline.ModelMachines.Armor
 {
 	class ArmorLV1:IArmor
 	{

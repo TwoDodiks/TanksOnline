@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClientTanksOnline.ModelMachines.Cannon
+namespace TanksOnline.ModelMachines.Cannon
 {
 	public class CannonLV1:IWeapone
 	{ 

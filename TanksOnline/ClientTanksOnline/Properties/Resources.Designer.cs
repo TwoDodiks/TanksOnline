@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace ClientTanksOnline.Properties
+namespace TanksOnline.Properties
 {
 	/// <summary>
 	///   Класс ресурсов со строгим типом для поиска локализованных строк и пр.

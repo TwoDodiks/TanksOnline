@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
+using Serialization;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
@@ -19,76 +20,84 @@ namespace TanksOnline
 	{
 
 		static TcpClient tcpClient;
+		static Socket host,client;
 		static TcpListener tcpListener;
 		static NetworkStream networkStream;
 		public Form1()
 		{
 			InitializeComponent();
+
+			//host = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+			//host.Bind(new IPEndPoint(IPAddress.Any, 8000));
+			//host.Listen(1);
+
+			//client = host.Accept();
+			//Listen();
+
 			tcpListener = new TcpListener(IPAddress.Any, 8000);
 			tcpListener.Start();
-			Console.WriteLine("Start");
 			tcpClient = tcpListener.AcceptTcpClient();
-			Traffic traffic = new Traffic();
-			Thread thread = new Thread(new ThreadStart(traffic.GetAction));
+			Thread thread = new Thread(new ThreadStart(GetAction));
 			thread.Start();
 			networkStream = tcpClient.GetStream();
+			//GetAction();
 		}
-		class Traffic
-		{
 
-			public void GetAction()
+		public Position NewAction(ref Position position)
+		{
+			if(position.Up)
+			{
+				position.Y -= position.Speed;
+				
+			}
+			if(position.Down)
+			{
+				position.Y += position.Speed;
+			}
+			if(position.Left)
+			{
+				position.X -= position.Speed;
+			}
+			if(position.Righ)
+			{
+				position.X += position.Speed;
+			}
+
+			return position;
+		}
+		public void GetAction()
+		{
+			try
 			{
 				Position position = new Position();
 				while (true)
 				{
 					byte[] bytes = new byte[1024];
-					int size = 0;
-					StringBuilder stringBuilder = new StringBuilder();
 					do
 					{
 						networkStream.Read(bytes, 0, bytes.Length);
-						position = ByteArrayToObject(bytes);
-
+						Object temp = Serialization.Serialization.ByteArrayToObject(bytes);
+						position = (Position)temp;
 
 					} while (networkStream.DataAvailable);
-
+					SendAction(NewAction(ref position));
 				}
-
 			}
-			private byte[] ObjectToByteArray(Position obj)
+			catch (Exception ex)
 			{
-				if (obj == null)
-					return null;
 
-				BinaryFormatter bf = new BinaryFormatter();
-				MemoryStream ms = new MemoryStream();
-				bf.Serialize(ms, obj);
-
-				return ms.ToArray();
-			}
-
-			// Convert a byte array to an Object
-			private Position ByteArrayToObject(byte[] arrBytes)
-			{
-				MemoryStream memStream = new MemoryStream();
-				BinaryFormatter binForm = new BinaryFormatter();
-				memStream.Write(arrBytes, 0, arrBytes.Length);
-				memStream.Seek(0, SeekOrigin.Begin);
-				Position obj = (Position)binForm.Deserialize(memStream);
-
-				return obj;
+				MessageBox.Show(ex.Message);
 			}
 		}
-		[Serializable]
-		class Position
+		public void SendAction(Position position)
 		{
-			public int X { get; set; } = 50;
-			public int Y { get; set; } = 50;
-			public int Speed { get; set; }
-			public bool Up { get; set; } = true;
-			public bool Down { get; set; } = false;
-			public bool Left { get; set; } = false;
-			public bool Righ { get; set; } = false;
+
+			byte[] data = Serialization.Serialization.ObjectToByteArray(position);
+			networkStream.Write(data, 0, data.Length);
 		}
+
+		
 	}
+		
 }
+

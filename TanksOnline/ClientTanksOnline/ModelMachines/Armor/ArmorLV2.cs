@@ -1,11 +1,11 @@
-﻿using ClientTanksOnline.ModelMachines;
+﻿using TanksOnline.ModelMachines;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClientTanksOnline.ModelMachines.Armor
+namespace TanksOnline.ModelMachines.Armor
 {
 	class ArmorLV2 :IArmor
 	{

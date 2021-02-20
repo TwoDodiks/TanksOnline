@@ -1,9 +1,9 @@
-﻿using ClientTanksOnline.ModelMachines.Armor;
-using ClientTanksOnline.ModelMachines.Cannon;
-using ClientTanksOnline.ModelMachines.Health;
+﻿using TanksOnline.ModelMachines.Armor;
+using TanksOnline.ModelMachines.Cannon;
+using TanksOnline.ModelMachines.Health;
 using System.Windows.Forms;
 
-namespace ClientTanksOnline.ModelMachines
+namespace TanksOnline.ModelMachines
 {
 	class LightTank :IMachines
 	{

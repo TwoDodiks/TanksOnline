@@ -1,6 +1,6 @@
-﻿using ClientTanksOnline.ModelMachines.Armor;
-using ClientTanksOnline.ModelMachines.Cannon;
-using ClientTanksOnline.ModelMachines.Health;
+﻿using TanksOnline.ModelMachines.Armor;
+using TanksOnline.ModelMachines.Cannon;
+using TanksOnline.ModelMachines.Health;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ClientTanksOnline.ModelMachines
+namespace TanksOnline.ModelMachines
 {
 	class Tank : IMachines
 	{

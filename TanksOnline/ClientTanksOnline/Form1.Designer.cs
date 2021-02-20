@@ -1,5 +1,5 @@
 ﻿
-namespace ClientTanksOnline
+namespace TanksOnline
 {
 	partial class Form1
 	{
