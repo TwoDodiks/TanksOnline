@@ -23,6 +23,13 @@ namespace ClientTanksOnline
 		public Game()
 		{
 			InitializeComponent();
+			//Thread thread = new Thread(new ThreadStart(Player1));
+			//thread.Start();
+			Player1();
+
+		}
+		private void Player1()
+		{
 			tcpClient = new TcpClient();
 			tcpClient.Connect("127.0.0.1", 8000);
 			networkStream = tcpClient.GetStream();
@@ -36,7 +43,6 @@ namespace ClientTanksOnline
 			thread.Start();
 			this.KeyDown += Form2_KeyDown;
 		}
-
 		private void Form2_KeyDown(object sender, KeyEventArgs e)
 		{
 			if (e.KeyData == Keys.Down) position.Up = true; else position.Up = false;

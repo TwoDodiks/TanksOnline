@@ -45,8 +45,9 @@ namespace TanksOnline
 				{
 					TcpClient tcpClient = tcpListener.AcceptTcpClient();
 					ClientObject clientObject = new ClientObject(tcpClient, this);
-					Thread thread = new Thread(new ThreadStart(clientObject.Process));
-					thread.Start();
+					clientObject.Process();
+					//Thread thread = new Thread(new ThreadStart(clientObject.Process));
+					//thread.Start();
 				}
 			}
 			catch (Exception ex)

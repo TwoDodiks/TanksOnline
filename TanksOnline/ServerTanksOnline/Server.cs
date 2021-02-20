@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TanksOnline;
 
 namespace ClientTanksOnline
 {
@@ -24,10 +25,15 @@ namespace ClientTanksOnline
 		//static Socket host,client;
 		static TcpListener tcpListener;
 		static NetworkStream networkStream;
+		static ServerObject serverObject;
+		static Thread listen;
 		public Form1()
 		{
 			InitializeComponent();
-
+			serverObject = new ServerObject();
+			serverObject.Listen();
+			//listen = new Thread(new ThreadStart(serverObject.Listen));
+			//listen.Start();
 			//host = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 			//host.Bind(new IPEndPoint(IPAddress.Any, 8000));
 			//host.Listen(1);
@@ -35,9 +41,9 @@ namespace ClientTanksOnline
 			//client = host.Accept();
 			//Listen();
 			
-			tcpListener = new TcpListener(IPAddress.Any, 8000);
-			tcpListener.Start(2);
-			Start();
+			//tcpListener = new TcpListener(IPAddress.Any, 8000);
+			//tcpListener.Start(2);
+			//Start();
 		}
 		private async void Start()
 		{
