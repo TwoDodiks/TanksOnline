@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <style>
+            body
+            {
+                background: rgba(0, 0, 0, 0.877);
+                background-image: url(Tank.jpg);
+                background-size: contain;
+                filter: alpha(Opacity=75);
+                opacity: 0.75;
+            }
+            @media screen and (max-width: 1200px) {
+                .description {
+                    width: 60%;
+                }
+            }
+            a{
+                margin-left: 80px;
+                color:silver;
+            }
+            p{
+                color: silver;
+            }
+            h5{
+                margin-left: 80px;
+                color: silver;
+            }
+
+            #my_form {
+                background-color:black;
+                width: 500px;
+                height: 870px;
+                border-radius: 20px;
+                margin: 0 auto;
+                padding-top: 20;
+                border-width: 5px;
+            }
+            .divinst
+            {
+                margin-left: 80px;
+                margin-top: 20px;
+                background-image: url(insta.png);
+                height: 40px;
+                width: 40px;
+                background-size: contain;
+                display: inline-block;
+            }
+            .divface{
+                background-image: url(fb.png);
+                height: 40px;
+                width: 40px;
+                background-size: contain;
+                display: inline-block;
+            }
+            .divyou{
+                background-image: url(youtube.png);
+                height: 40px;
+                width: 40px;
+                background-size: contain;
+                display: inline-block;
+            }
+            input{
+                margin-left: 80px;
+                background-color: black;
+                width: 350px;
+                height: 50px;
+                color: white;
+                
+            }
+            .div_1{
+                position: absolute;
+                margin-left: 60;
+                width: 400px;
+                height: 100px;
+                background-color: rgb(255, 94, 0);
+                border-radius: 5px;
+            }
+            .div_1 h1{
+                color: white;
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-right: -50%;
+                transform: translate(-50%, -50%)
+            }
+            .input_1
+            {
+                background-color: rgb(255, 94, 0);
+                width: 400px;
+                height: 100px;
+                margin-left: 60px;
+                
+            }
+            .h1_1
+            {
+                margin-top: -70px;
+                margin-left: 165px;
+            }
+            button
+            {
+                margin-left: 155px;
+                background-color:  rgb(255, 94, 0);
+                width: 200px;
+                height: 60px;
+                color: white;
+                font-size: 15px;
+                border-radius: 5px;
+                border: solid;
+            }
+        </style>
+    </head>
+    <body>
+        <form id="my_form" method="GET">
+            <label style="color: white; text-align: center;"><h2>Зарегестрируйся и играй!</h2></label>
+            <hr>
+            <div style="width: 350px; margin-left: 80px; margin-top: 20px;"><Label style="color: silver;">Используй свои данные из других сервисов, что б сделать аккаунт быстрее:</Label></div>
+            <div class="divinst"></div>
+            <div class="divface"></div>
+            <div class="divyou"></div>
+            <p><input type="email" placeholder="Электронная почта"></p>
+            <p><input type="text" placeholder="Выберите имя в игре"></p>
+            <p><input type="password" placeholder="Придумайте пароль для игры"></p>
+            <p><input type="password" placeholder="Повторите придуманный пароль"></p>            
+            <a><h5>У вас есть инвайт-код?</h5></a>
+            <input type="search">
+            <h5 style="margin-left: 20px;"><input style="width: 15px; height: 15px;" type="checkbox" >Я подтверждаю, что понимаю и принимаю условия Лицензионного соглашения и Политики конфидинциальности</h5>
+            <h5 style="margin-left: 20px;"><input style="width: 15px; height: 15px;" type="checkbox" >Я хочу принимать больше целовых уведомлений </h5>
+            
+            <button>Зарегестрироваться</button>
+        </form>
+    </body>
+</html>
